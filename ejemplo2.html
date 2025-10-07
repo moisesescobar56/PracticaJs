@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones y condiciones</title>
+</head>
+<body>
+    <h1>Funciones y condiciones</h1>
+    
+    <input type="text" id="txtEdad" placeholder="Edad" />
+    <button type="button" onclick="calcular()" >Ejecutar</button>
+
+    <script>
+
+        function getValue(id){
+            return document.getElementById(id).value;
+        }
+
+        function calcular(){
+            var edad = getValue("txtEdad");
+            var salida = "Edad: " + edad;
+
+            if(edad >= 18) {
+                salida += ", eres mayor de edad.";
+            } else {
+                salida += ", eres menor de edad.";
+            }
+
+            alert(salida);
+        }
+
+    </script>
+
+</body>
+</html>
